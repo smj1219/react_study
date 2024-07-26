@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Child from './components/child';
+import Child from './components/Child';
 import Fortune from './components/Fortune';
 import List from './components/List';
 
