@@ -1,34 +1,50 @@
-// App.css 적용하기 (내부 css)
+import 'bootstrap/dist/css/bootstrap.css'
 import { useState } from 'react';
-import './App.css'
-
+import { Alert, Button, Col, Row } from 'react-bootstrap';
 
 //함수형 component
 function App() {
-  console.log("App 함수가 호출됨!")
-  /*
-    - useState() 함수는 배열을 리턴한다
-    - [ 상태값 , 상태값을 바꿀 함수 ]  구조이다
-    - useState(상태의 초기값)  
-  */
-  const [count, setCount] = useState(0)
-
-  //useState 함수를 이용해서 이름의 초기값은 "김구라" 버튼을 누르면 "원숭이" 로 바꿔보세요
-  const [name, setName] = useState("김구라")
 
   return (
     <div className="container">
       <h1>인덱스 페이지 입니다</h1>
-      <button onClick={()=>{
-        setCount(count+1)
-      }}>{count}</button>
-      <p>내이름은 <strong>{name}</strong></p>
-      <button onClick={()=>{
-        setName("원숭이")
-      }}>이름 변경</button>
+      <div className="row">
+        <div className="col">칼럼1</div>
+        <div className="col">칼럼2</div>
+        <div className="col">칼럼3</div>
+      </div>
+      <button className='btn btn-primary btn-lg'>버튼</button>
+      <Row>
+        <Col>칼럼1</Col>
+        <Col>칼럼2</Col>
+        <Col>칼럼3</Col>
+      </Row>
+      <Button variant='primary' size='lg' >버튼</Button>
+      <br />
+      <br />
+      <AlertExample/>
     </div>
   );
 }
+
+function AlertExample() {
+  const [show, setShow] = useState(true);
+
+  if (show) {
+    return (
+      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+        <p>
+          Change this and that and try again. Duis mollis, est non commodo
+          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+          Cras mattis consectetur purus sit amet fermentum.
+        </p>
+      </Alert>
+    );
+  }
+  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
+}
+
 
 //외부에서 App.js 를 import 하면 App 함수를 사용할수 있다. (src/index.js)
 export default App;
