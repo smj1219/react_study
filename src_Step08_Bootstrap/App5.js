@@ -27,7 +27,7 @@ function App5() {
     }
 
     //출력할 페이지 번호라고 가정
-    const pageNums=range(11, 15)
+    const pageNums=range(11, 20)
     //현재 페이지 정보라고 가정
     const currntPage=15;
 

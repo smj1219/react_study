@@ -23,18 +23,18 @@ function App3() {
             </Row>
             <p> Image component 에서는 data-src 대신에 src 를 사용하면 된다.</p>
             <Row>
-                <Col><Image src="holder.js/100px200?theme=sky&outline=yes"/></Col>
-                <Col><Image src="holder.js/100px200?theme=vine&outline=yes"/></Col>
+                <Col><Image data-src="holder.js/100px200?theme=sky&outline=yes"/></Col>
+                <Col><Image data-src="holder.js/100px200?theme=vine&outline=yes"/></Col>
             </Row>
             <Row>
                 <Col xs={6} md={4}>
-                <Image src="holder.js/100px180" rounded />
+                <Image data-src="holder.js/100px180" rounded />
                 </Col>
                 <Col xs={6} md={4}>
-                <Image src="holder.js/100px180" roundedCircle />
+                <Image data-src="holder.js/100px180" roundedCircle />
                 </Col>
                 <Col xs={6} md={4}>
-                <Image src="holder.js/100px180" thumbnail />
+                <Image data-src="holder.js/100px180" thumbnail />
                 </Col>
             </Row>
         </Container>

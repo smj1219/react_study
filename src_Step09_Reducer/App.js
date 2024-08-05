@@ -1,13 +1,19 @@
 // App.css 적용하기 (내부 css)
 import './App.css'
+import Friends from './components/Friends';
+import MyCounter from './components/MyCounter';
+import YourCounter from './components/YourCounter';
 
 //함수형 component
 function App() {
+   
 
   return (
     <div className="container">
       <h1>인덱스 페이지 입니다</h1>
-      
+      <MyCounter/>
+      <YourCounter/>
+      <Friends/>
     </div>
   );
 }
