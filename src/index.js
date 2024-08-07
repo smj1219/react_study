@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 // App.js 를 import 해서 
-import App from './App';
+import App from './App3';
 import reportWebVitals from './reportWebVitals';
 
 //id 가 root 인 곳에 UI 출력하기 
