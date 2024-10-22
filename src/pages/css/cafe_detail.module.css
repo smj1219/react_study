@@ -1,3 +1,5 @@
+/* src/pages/css/cafe_detail.module.css */
+
 .content{
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -70,8 +72,19 @@
 .comments dt{
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /*폭이 부족할때 2줄로 표시되도록 설정*/
 }
 /* 댓글 기능 버튼을 우측 끝에 배치하기 위해 */
 .comments dt small{
     margin-right:auto;
+}
+/* 댓글 하나하나의 아래쪽 경계선을 흐리게 표시하고 위쪽 padding 추가 */
+.comments li{
+    border-bottom: 1px solid #cecece;
+    padding-top: 5px;
+}
+/* 삭제된 댓글에 위 아래 공간 추가하기 */
+.comments li p{
+    padding-top: 10px;
+    margin-bottom: 50px;
 }
